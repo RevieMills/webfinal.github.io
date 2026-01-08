@@ -1,0 +1,668 @@
+body{
+    width:100%;
+    margin:0px;
+    background-color: black;
+}
+.main-container{
+    flex-direction: column;
+    
+}
+.container-1{
+    margin:0;
+    background-color: black;
+    height:80px;
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-top:10px;
+    font-family:'Lexend Exa';
+    color:#9FC8AD;
+    border-bottom:12px #9FC8AD solid;
+}
+
+
+.title{
+    font-family:'Lexend Exa';
+    font-weight:bold;
+    font-size:24px;
+    padding-left:10px;
+    color:white;
+}
+
+#donate{
+    width:85px;
+    height:25px;
+    background-color:#9FC8AD;
+    border:1px #9FC8AD solid;
+    font-family:'Lexend Exa';
+    color:black;
+    border-radius:5px;
+    padding:5px;
+    font-size:20px;
+}
+
+#font{
+    font-size:20px;
+}
+
+.sub-container-1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width:400px;
+    padding-right:30px;
+}
+
+.zoom-text {
+    display: inline-block; /* Penting agar transformasi bekerja sempurna */
+    transition: transform 0.3s ease; /* Durasi animasi (0.3 detik) */
+    cursor: pointer;
+}
+
+.zoom-text:hover {
+    transform: scale(1.2); /* Membesar 1.2 kali lipat (20% lebih besar) */
+    
+}
+
+ .href{
+        color:black;
+        text-decoration:none;
+    }
+
+
+.image{
+    margin:0px;
+}
+
+.img-1{
+    width:1520px;
+    height:700px;
+}
+
+/* Container mandiri */
+.hover-box {
+    position: relative;
+    width: 90%;              /* Responsif untuk layar kecil */
+    max-width: 700px;        /* Lebar maksimal kotak */
+    margin: 50px auto;       /* Mengetengahkan secara horizontal & memberi jarak atas-bawah */
+    padding: 40px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+    background: transparent;
+    text-align: center;
+    display: block;          /* Memastikan margin auto bekerja */
+}
+
+.box-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+     font-family:'Lexend Exa';
+}
+
+.box-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.box-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0;
+    font-weight: 300; /* Membuat teks terlihat lebih modern */
+}
+
+/* Background Hijau yang bergeser */
+.green-bg {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #2e7d32;
+    transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Gerakan lebih halus */
+    z-index: 1;
+}
+
+/* State saat aktif (setelah hover) */
+.hover-box.active .green-bg {
+    left: 0;
+}
+
+.hover-box.active {
+    border-color: #2e7d32;
+}
+
+
+
+
+
+
+/* .purpose{
+    margin:auto;
+    width:800px;
+    height:350px;
+    border: solid 1px green;
+    text-align: center;
+    align-items: center;
+}
+.paragraph{
+    margin:auto;
+    width:800px;
+    height:350px;
+    border: solid 1px green;
+    text-align: center;
+    align-items: center;
+    font-family:'Lexend Exa';
+     font-size:18px;
+}
+.paragraph h1{
+    font-weight: bold;
+    font-size:24px;
+} */
+
+
+.carousel-container {
+    width: 100%;
+    max-width: 1900px; 
+    height: 650px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.static-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, 25%); /* Membuat teks benar-benar di tengah */
+    z-index: 10; /* Angka lebih tinggi dari slide agar berada di depan */
+     font-family:'Lexend Exa';
+    text-align: center;
+    color: white;
+    width: 80%;
+    pointer-events: none; /* Agar klik tetap tembus ke bawah jika diperlukan */
+}
+
+.static-hero-text h1 {
+    font-family:'Lexend Exa';
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Bayangan agar teks kontras */
+}
+
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%; /* Memastikan gambar memenuhi container */
+    flex-shrink: 0;
+}
+
+/* --- INFO SECTION (REFERENSI BARU) --- */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%; /* Memberi ruang di kanan kiri */
+    gap: 50px;
+    background-color: #000; /* Latar belakang hitam pekat */
+}
+
+.info-content {
+    flex: 1; /* Mengambil setengah ruang */
+    text-align: left;
+}
+
+.info-title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    font-family:'Lexend Exa';
+}
+
+.info-description {
+    font-family:'Lexend Exa';
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc; /* Warna teks agak abu agar tidak terlalu kontras */
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.info-description2 {
+    margin:auto;
+    max-width:1000px;
+    font-family:'Lexend Exa';
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc; /* Warna teks agak abu agar tidak terlalu kontras */
+    text-align:center;
+    margin-top:0px;
+    
+}
+
+/* Tombol sesuai referensi warna hijau figma */
+.btn-learn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #98bc9f; /* Warna hijau pucat sesuai referensi */
+    color: #1a3c26;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+     font-family:'Lexend Exa';
+}
+
+.btn-learn:hover {
+    background-color: white;
+    transform: translateY(-5px);
+}
+
+.info-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    /* Memberikan sedikit efek bayangan pada gambar */
+    box-shadow: 20px 20px 0px rgba(152, 188, 159, 0.2); 
+}
+
+/* Responsif untuk layar HP */
+
+
+/* --- MAP SECTION --- */
+.map-section {
+    background-color: #000; /* Latar belakang hitam sesuai desain */
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.map-title {
+    color: #98bc9f; /* Warna hijau pucat sesuai teks figma Anda */
+    font-family:'Lexend Exa';
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1100px; /* Lebar maksimal kotak peta */
+    height: 600px;     /* Tinggi kotak peta */
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bingkai tipis */
+    background-color: #fff; /* Latar dalam putih sebelum peta dimuat */
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 768px) {
+    .map-container {
+        height: 400px;
+    }
+    .map-title {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+}
+
+footer{
+    width:100%;
+    max-width:1280px;
+    height:300px;
+    background-color:#9FC8AD;
+    padding:120px;
+    
+}
+
+.size-icon{
+    width:40px;
+    height:40px;
+}
+
+.icon{
+    width:300px;
+    height:40px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.footer-font{
+    padding:0px;
+    margin:0px;
+    font-family:'Lexend Exa';
+    font-weight:bold;
+    font-size:30px;
+}
+
+.footer-font-2{
+    padding:0px;
+    margin:0px;
+    font-family:'Lexend Exa';
+    font-weight:bold;
+    font-size:20px;
+}
+
+.main-flex{
+    margin:auto;
+    width:1000px;
+    height:50px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.overall-flex{
+    margin:auto;
+    width:1000px;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+input{
+    margin-top:10px;
+    border:3px solid black;
+    border-radius:5px;
+    width:400px;
+    height:30px;
+
+}
+
+/* State awal: Tersembunyi dan sedikit bergeser ke bawah */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+/* State akhir: Muncul di posisi asli */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variasi Slide dari Kiri untuk Teks */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1.2s ease-out;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Variasi Slide dari Kanan untuk Gambar */
+.reveal-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1.2s ease-out;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.upd-pc-only {
+    --f-lexend: 'Lexend Exa', sans-serif;
+    padding: 150px 0; /* Jarak lebih besar agar efek scroll terasa */
+    display: flex;
+    justify-content: center;
+    font-family: var(--f-lexend);
+    background-color: white; /* Background gelap agar teks putih terlihat */
+}
+
+.upd-layout-wrapper {
+    display: flex;
+    align-items: flex-end; 
+    gap: 30px;
+    width: 1050px; 
+}
+
+.upd-cards-row {
+    display: flex;
+    gap: 20px;
+    flex: 0 0 750px; 
+}
+
+.upd-box {
+    position: relative;
+    width: 365px;
+    height: 480px;
+    background: white; 
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.upd-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: white;
+}
+
+.upd-content {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease 0.6s;
+}
+
+.upd-label { color: white; font-size: 14px; text-transform: lowercase; }
+
+/* Judul NEWEST Updates Sekarang Putih */
+.upd-title-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.upd-text-main { font-size: 45px; margin: 0; line-height: 0.9; color: black; }
+.upd-text-sub { font-size: 24px; margin: 0; color: black; }
+
+.upd-circle {
+    width: 40px; height: 40px;
+    background: #9dbca4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #1a1a1a;
+    transition: transform 0.3s ease;
+}
+.upd-circle:hover { transform: scale(1.2); }
+
+/* Animasi Tirai */
+.curtain-anim::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: white; 
+    transform: translateY(0);
+    transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 5;
+}
+
+.curtain-anim.active::after { transform: translateY(-100%); }
+.curtain-anim.active .upd-content { opacity: 1; transform: translateY(0); }
+
+
+/* --- UPDATE BAGIAN NEWEST UPDATES (Flex & RWD) --- */
+
+.upd-pc-only {
+    --f-lexend: 'Lexend Exa', sans-serif;
+    padding: 100px 5%; /* Menggunakan % agar tidak mentok layar */
+    display: flex;
+    justify-content: center;
+    font-family: var(--f-lexend);
+    background-color: white; 
+    box-sizing: border-box;
+}
+
+.upd-layout-wrapper {
+    display: flex;
+    align-items: flex-end; 
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px; /* Batas maksimal lebar PC */
+}
+
+.upd-cards-row {
+    display: flex;
+    gap: 20px;
+    flex: 2; /* Mengambil ruang lebih besar secara fleksibel */
+}
+
+.upd-box {
+    position: relative;
+    flex: 1; /* Membagi dua kotak secara merata */
+    height: 480px;
+    background: white; 
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.upd-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Judul NEWEST Updates */
+.upd-title-side {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Rata kanan untuk PC */
+}
+
+.upd-text-main { font-size: 45px; margin: 0; line-height: 0.9; color: black; }
+.upd-text-sub { font-size: 24px; margin: 0; color: black; text-align: right; }
+
+/* --- RESPONSIVE SESUAI FIGMA --- */
+
+/* TABLET (768px) - Mengacu Frame 1 Figma */
+@media (max-width: 992px) {
+    .upd-layout-wrapper {
+        flex-direction: column; /* Menumpuk: Gambar di atas, Teks di bawah */
+        align-items: center;
+    }
+
+    .upd-cards-row {
+        width: 100%;
+    }
+
+    .upd-box {
+        height: 380px; /* Ukuran lebih kecil untuk tablet */
+    }
+
+    .upd-title-side {
+        width: 100%;
+        align-items: flex-end; /* Tetap di kanan sesuai Frame 1 */
+        margin-top: 20px;
+    }
+
+    .static-hero-text{
+        width: 100%;
+        margin-left: 30%;
+        text-font: 85%;
+    }
+
+    .hover-box{
+        width: 70%;
+    }
+
+    .title{
+        font-size:18spx;
+    }
+
+    #donate{
+        font-size:15px;
+        width:60px;
+        height:20px;
+    }
+
+    #font{
+       font-size:15px; 
+    }
+    
+}
+
+/* MOBILE (480px) - Mengacu Frame 2 Figma */
+@media (max-width: 500px) {
+    .upd-cards-row {
+        flex-direction: column; /* Gambar menumpuk vertikal */
+    }
+
+    .upd-box {
+        width: 100%;
+        height: 300px;
+    }
+
+    .upd-title-side {
+        align-items: center; /* Teks pindah ke tengah sesuai Frame 2 */
+        text-align: center;
+    }
+
+    .info-image{
+        justify-content: center;
+    }
+
+    .upd-text-main { font-size: 32px; }
+    .upd-text-sub { font-size: 18px; text-align: center; }
+    
+    .title{
+        font-size:12px;
+    }
+
+    #donate{
+        font-size:10px;
+        width:45px;
+        height:15px;
+    }
+
+    #font{
+       font-size:10px; 
+    }
+    
+   
+
+     
+
+}
+
+

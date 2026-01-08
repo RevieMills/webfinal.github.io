@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donation</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&display=swap" rel="stylesheet">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/donation.css">
+</head>
+
+<body>
+  
+
+
+  <div class="insides">
+    <div class="title">
+      <h1>DONATE</h1>
+    </div>
+
+    <div class="bottom">
+      <div class="left">
+        <h2 class="text">Thank You For Your Support</h2>
+        <p class="text">
+          We aim to further advocate for the protection and preservation of
+          Rafflesia flowers all over Indonesia. Your support is deeply
+          appreciated and will be used to fund our cause.
+        </p>
+      </div>
+
+      <div class="right">
+        <form>
+          <table>
+            <tr>
+              <td><input type="button" value="25.000" onclick="setAmount(25000)"></td>
+              <td><input type="button" value="50.000" onclick="setAmount(50000)"></td>
+              <td><input type="button" value="100.000" onclick="setAmount(100000)"></td>
+            </tr>
+
+            <tr>
+              <td colspan="3">Amount</td>
+            </tr>
+
+            <tr>
+              <td colspan="3">
+                <input type="number" id="amountInput" min="100" max="1000000000000">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="3" class="currency-note">
+                We use Indonesian Rupiah as our base currency
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="3">
+                <input type="submit" value="Donate" onclick="alert('Donation received, thank you!')">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="donation.js"></script>
+</body>
+</html>
